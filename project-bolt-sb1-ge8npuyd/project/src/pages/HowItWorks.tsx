@@ -65,7 +65,7 @@ export default function HowItWorks() {
       <section className="relative py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-slate-100">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-slate-100 drop-shadow-[0_0_30px_rgba(6,182,212,0.3)]">
               How It Works
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
@@ -78,10 +78,17 @@ export default function HowItWorks() {
           </div>
 
           <div className="space-y-16">
-            {steps.map((step, index) => (
+            {steps.map((step, index) => {
+              const colors = [
+                { border: 'border-cyan-500/20', hover: 'hover:border-cyan-400/40', shadow: 'hover:shadow-cyan-500/20', icon: 'from-cyan-500/20 to-blue-500/20', iconBorder: 'border-cyan-500/30' },
+                { border: 'border-blue-500/20', hover: 'hover:border-blue-400/40', shadow: 'hover:shadow-blue-500/20', icon: 'from-blue-500/20 to-violet-500/20', iconBorder: 'border-blue-500/30' },
+                { border: 'border-violet-500/20', hover: 'hover:border-violet-400/40', shadow: 'hover:shadow-violet-500/20', icon: 'from-violet-500/20 to-blue-500/20', iconBorder: 'border-violet-500/30' },
+              ];
+              const color = colors[index % colors.length];
+              return (
               <div
                 key={step.number}
-                className="relative bg-slate-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 sm:p-12 hover:border-cyan-400/40 transition-all duration-300"
+                className={`relative bg-slate-900/30 backdrop-blur-sm border ${color.border} rounded-2xl p-8 sm:p-12 ${color.hover} transition-all duration-300 hover:shadow-2xl ${color.shadow}`}
               >
                 <div className="absolute top-6 left-6 text-8xl font-bold text-cyan-500/5">
                   {step.number}
@@ -89,7 +96,7 @@ export default function HowItWorks() {
 
                 <div className="relative z-10">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 flex items-center justify-center">
+                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${color.icon} border ${color.iconBorder} flex items-center justify-center shadow-lg`}>
                       <step.icon className="text-cyan-400" size={32} />
                     </div>
                     <div>
@@ -133,7 +140,8 @@ export default function HowItWorks() {
                   )}
                 </div>
               </div>
-            ))}
+            );
+            })}
           </div>
         </div>
       </section>
@@ -196,7 +204,7 @@ export default function HowItWorks() {
             </p>
             <Link
               to="/growth-framework"
-              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-lg font-semibold rounded-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-lg font-semibold rounded-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan-500/30"
             >
               View the Growth Framework
             </Link>

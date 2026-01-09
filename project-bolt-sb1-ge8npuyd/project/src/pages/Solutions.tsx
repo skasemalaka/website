@@ -25,6 +25,16 @@ export default function Solutions() {
         'Escalation protocols for human intervention',
         'Knowledge base integration',
       ],
+      colors: {
+        border: 'border-cyan-500/20',
+        hoverBorder: 'hover:border-cyan-400/40',
+        shadow: 'hover:shadow-cyan-500/20',
+        iconBg: 'from-cyan-500/20 to-blue-500/20',
+        iconBorder: 'border-cyan-500/30',
+        iconColor: 'text-cyan-400',
+        titleHover: 'group-hover:text-cyan-400',
+        dot: 'bg-cyan-400',
+      },
     },
     {
       id: 'voice-callers',
@@ -39,6 +49,16 @@ export default function Solutions() {
         'Information gathering and data capture',
         'Natural conversation flows',
       ],
+      colors: {
+        border: 'border-blue-500/20',
+        hoverBorder: 'hover:border-blue-400/40',
+        shadow: 'hover:shadow-blue-500/20',
+        iconBg: 'from-blue-500/20 to-violet-500/20',
+        iconBorder: 'border-blue-500/30',
+        iconColor: 'text-blue-400',
+        titleHover: 'group-hover:text-blue-400',
+        dot: 'bg-blue-400',
+      },
     },
     {
       id: 'chat-agents',
@@ -53,6 +73,16 @@ export default function Solutions() {
         'Information retrieval and delivery',
         'Multi-channel deployment',
       ],
+      colors: {
+        border: 'border-violet-500/20',
+        hoverBorder: 'hover:border-violet-400/40',
+        shadow: 'hover:shadow-violet-500/20',
+        iconBg: 'from-violet-500/20 to-purple-500/20',
+        iconBorder: 'border-violet-500/30',
+        iconColor: 'text-violet-400',
+        titleHover: 'group-hover:text-violet-400',
+        dot: 'bg-violet-400',
+      },
     },
     {
       id: 'lead-qualification',
@@ -67,6 +97,16 @@ export default function Solutions() {
         'Confirmation and reminder workflows',
         'CRM integration and data sync',
       ],
+      colors: {
+        border: 'border-cyan-500/20',
+        hoverBorder: 'hover:border-cyan-400/40',
+        shadow: 'hover:shadow-cyan-500/20',
+        iconBg: 'from-cyan-500/20 to-teal-500/20',
+        iconBorder: 'border-cyan-500/30',
+        iconColor: 'text-cyan-400',
+        titleHover: 'group-hover:text-cyan-400',
+        dot: 'bg-cyan-400',
+      },
     },
     {
       id: 'operations',
@@ -81,6 +121,16 @@ export default function Solutions() {
         'Document processing and classification',
         'Task assignment and tracking',
       ],
+      colors: {
+        border: 'border-blue-500/20',
+        hoverBorder: 'hover:border-blue-400/40',
+        shadow: 'hover:shadow-blue-500/20',
+        iconBg: 'from-blue-500/20 to-cyan-500/20',
+        iconBorder: 'border-blue-500/30',
+        iconColor: 'text-blue-400',
+        titleHover: 'group-hover:text-blue-400',
+        dot: 'bg-blue-400',
+      },
     },
     {
       id: 'web-apps',
@@ -95,6 +145,16 @@ export default function Solutions() {
         'Data visualization and reporting',
         'Integration with automation systems',
       ],
+      colors: {
+        border: 'border-violet-500/20',
+        hoverBorder: 'hover:border-violet-400/40',
+        shadow: 'hover:shadow-violet-500/20',
+        iconBg: 'from-violet-500/20 to-blue-500/20',
+        iconBorder: 'border-violet-500/30',
+        iconColor: 'text-violet-400',
+        titleHover: 'group-hover:text-violet-400',
+        dot: 'bg-violet-400',
+      },
     },
     {
       id: 'custom',
@@ -109,6 +169,16 @@ export default function Solutions() {
         'Legacy system integration',
         'Scalable architecture design',
       ],
+      colors: {
+        border: 'border-cyan-500/20',
+        hoverBorder: 'hover:border-cyan-400/40',
+        shadow: 'hover:shadow-cyan-500/20',
+        iconBg: 'from-cyan-500/20 to-blue-500/20',
+        iconBorder: 'border-cyan-500/30',
+        iconColor: 'text-cyan-400',
+        titleHover: 'group-hover:text-cyan-400',
+        dot: 'bg-cyan-400',
+      },
     },
   ];
 
@@ -117,7 +187,7 @@ export default function Solutions() {
       <section className="relative py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-slate-100">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-slate-100 drop-shadow-[0_0_30px_rgba(6,182,212,0.3)]">
               Solutions
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
@@ -130,17 +200,17 @@ export default function Solutions() {
               <div
                 key={solution.id}
                 id={solution.id}
-                className="group bg-slate-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 sm:p-12 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10"
+                className={`group bg-slate-900/30 backdrop-blur-sm border ${solution.colors.border} rounded-2xl p-8 sm:p-12 ${solution.colors.hoverBorder} transition-all duration-300 hover:shadow-2xl ${solution.colors.shadow}`}
               >
                 <div className="flex flex-col md:flex-row gap-8">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <solution.icon className="text-cyan-400" size={32} />
+                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${solution.colors.iconBg} border ${solution.colors.iconBorder} flex items-center justify-center group-hover:scale-110 group-hover:shadow-lg transition-all duration-300`}>
+                      <solution.icon className={solution.colors.iconColor} size={32} />
                     </div>
                   </div>
 
                   <div className="flex-grow">
-                    <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-slate-100 group-hover:text-cyan-400 transition-colors">
+                    <h2 className={`text-2xl sm:text-3xl font-bold mb-4 text-slate-100 ${solution.colors.titleHover} transition-colors`}>
                       {solution.title}
                     </h2>
                     <p className="text-lg text-slate-300 mb-6 leading-relaxed">
@@ -153,7 +223,7 @@ export default function Solutions() {
                           key={featureIndex}
                           className="flex items-start gap-3 text-slate-400"
                         >
-                          <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2" />
+                          <div className={`flex-shrink-0 w-1.5 h-1.5 rounded-full ${solution.colors.dot} mt-2`} />
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -167,7 +237,7 @@ export default function Solutions() {
           <div className="mt-16 text-center">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-lg font-semibold rounded-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-lg font-semibold rounded-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan-500/30"
             >
               Discuss Your Requirements
               <ArrowRight className="ml-2" size={20} />

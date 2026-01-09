@@ -41,9 +41,9 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-20">
           <Link
             to="/"
-            className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent tracking-tight"
+            className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent tracking-tight hover:drop-shadow-[0_0_15px_rgba(6,182,212,0.5)] transition-all duration-300"
           >
-            COREFLOW
+            Coreflow Automation
           </Link>
 
           <div className="hidden lg:flex items-center space-x-8">
@@ -62,7 +62,7 @@ export default function Navigation() {
             ))}
             <Link
               to="/contact"
-              className="px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
+              className="px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 shadow-cyan-500/30"
             >
               Request an Automation Audit
             </Link>
@@ -95,7 +95,7 @@ export default function Navigation() {
             ))}
             <Link
               to="/contact"
-              className="block px-4 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm font-semibold rounded-lg text-center hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300"
+              className="block px-4 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm font-semibold rounded-lg text-center hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 shadow-cyan-500/30"
             >
               Request an Automation Audit
             </Link>

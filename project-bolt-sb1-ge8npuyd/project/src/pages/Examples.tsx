@@ -60,7 +60,7 @@ export default function Examples() {
       <section className="relative py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-slate-100">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-slate-100 drop-shadow-[0_0_30px_rgba(6,182,212,0.3)]">
               Example Automations
             </h1>
             <p className="text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed">
@@ -68,7 +68,7 @@ export default function Examples() {
             </p>
           </div>
 
-          <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-xl p-6 mb-16">
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-xl p-6 mb-16 shadow-lg shadow-cyan-500/10">
             <p className="text-sm text-slate-300 text-center leading-relaxed">
               <span className="font-semibold text-cyan-400">Demonstration Systems: </span>
               The following are example systems created to demonstrate how AI automation
@@ -84,7 +84,7 @@ export default function Examples() {
             {featuredDemos.map((demo, index) => (
               <div
                 key={index}
-                className="bg-slate-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 sm:p-12 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10"
+                className="bg-gradient-to-br from-slate-900/40 to-slate-800/20 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 sm:p-12 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20"
               >
                 <div className="flex items-start gap-3 mb-6">
                   <div className="flex-shrink-0 px-4 py-1.5 bg-cyan-500/20 border border-cyan-500/30 rounded-full text-xs font-semibold text-cyan-400 uppercase tracking-wider">
@@ -100,7 +100,7 @@ export default function Examples() {
                   href={demo.videoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 mb-8"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 mb-8 shadow-cyan-500/30"
                 >
                   <Play size={20} />
                   Watch Demo Video
@@ -141,7 +141,11 @@ export default function Examples() {
             {additionalDemos.map((demo, index) => (
               <div
                 key={index}
-                className="group bg-slate-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10"
+                className={`group bg-slate-900/30 backdrop-blur-sm border rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-xl ${
+                  index % 2 === 0
+                    ? 'border-cyan-500/20 hover:shadow-cyan-500/10'
+                    : 'border-blue-500/20 hover:shadow-blue-500/10'
+                }`}
               >
                 <div className="flex items-start gap-3 mb-4">
                   <div className="flex-shrink-0 px-3 py-1 bg-slate-800/50 border border-cyan-500/20 rounded-full text-xs font-medium text-cyan-400 uppercase tracking-wider">
@@ -182,7 +186,7 @@ export default function Examples() {
           <div className="text-center">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-lg font-semibold rounded-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-lg font-semibold rounded-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan-500/30"
             >
               Discuss Your Automation Needs
               <ArrowRight className="ml-2" size={20} />

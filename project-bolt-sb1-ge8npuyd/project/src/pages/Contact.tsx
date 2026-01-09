@@ -40,7 +40,7 @@ export default function Contact() {
       <section className="relative py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-slate-100">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-slate-100 drop-shadow-[0_0_30px_rgba(6,182,212,0.3)]">
               Request an Automation Audit
             </h1>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
@@ -49,10 +49,10 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="bg-slate-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 sm:p-12">
+          <div className="bg-slate-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 sm:p-12 shadow-xl shadow-cyan-500/10">
             {submitted ? (
               <div className="text-center py-12">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-cyan-500/20 border border-cyan-500/30 mb-6">
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-cyan-500/20 border border-cyan-500/30 mb-6 shadow-lg shadow-cyan-500/30">
                   <CheckCircle className="text-cyan-400" size={40} />
                 </div>
                 <h2 className="text-2xl font-bold text-slate-100 mb-4">
@@ -160,7 +160,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-lg font-semibold rounded-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
+                  className="w-full inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-lg font-semibold rounded-lg hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan-500/30"
                 >
                   <Send className="mr-2" size={20} />
                   Submit Request
@@ -173,7 +173,7 @@ export default function Contact() {
             )}
           </div>
 
-          <div className="mt-12 bg-cyan-500/10 border border-cyan-500/30 rounded-xl p-6">
+          <div className="mt-12 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-xl p-6 shadow-lg shadow-cyan-500/10">
             <p className="text-sm text-slate-300 leading-relaxed">
               <span className="font-semibold text-cyan-400">What happens next: </span>
               After reviewing your information, we'll schedule a call to discuss your
